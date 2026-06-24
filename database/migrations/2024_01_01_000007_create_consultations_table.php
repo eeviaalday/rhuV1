@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('consultations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('patient_id');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->date('date');
             $table->string('blood_pressure')->nullable();
             $table->string('temperature')->nullable();
